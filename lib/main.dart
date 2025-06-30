@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:template_project/core/util/api_base_url_helper.dart';
 
 void main() {
 // TODO: update packages by running
@@ -63,7 +62,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    fetch();
   }
 
   void _incrementCounter() {
@@ -75,13 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
-    fetch();
-  }
-
-  void fetch() async {
-    final data = await ApiBaseHelper()
-        .get('https://mp1e73ab50eb55d753fc.free.beeceptor.com/user');
-    print(data);
   }
 
   @override
